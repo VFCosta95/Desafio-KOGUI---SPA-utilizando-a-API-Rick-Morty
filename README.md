@@ -1,27 +1,44 @@
-# APIRickandMorty
+# Documentação da Single Page Application (SPA) - Rick & Morty Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+## Visão Geral
+A SPA Rick & Morty Dashboard é uma aplicação web desenvolvida para fornecer uma interface interativa e responsiva que permite aos usuários explorar informações sobre personagens, locais e episódios da série animada Rick & Morty. Utiliza a API pública Rick & Morty para consumir e exibir dados atualizados em tempo real.
 
-## Development server
+## Funcionalidades Principais:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Página de Listagem
+- Apresenta uma lista paginada e filtrável de personagens, locais e episódios da série.
+- Implementação de scroll infinito para carregar automaticamente mais itens ao rolar a página.
 
-## Code scaffolding
+### Página de Detalhes
+- Acessível ao clicar em um item específico da listagem.
+- Exibe informações detalhadas do personagem, local ou episódio selecionado.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Barra de Busca
+- Permite aos usuários buscar por personagens, locais ou episódios através de uma barra de busca integrada.
+- Os resultados são filtrados dinamicamente conforme o usuário digita.
 
-## Build
+### Autenticação
+- Funcionalidade de criar conta e login para acessar recursos exclusivos da aplicação.
+- Após o login, o nome do usuário é exibido na interface para personalização da experiência.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Página de Perfil
+- Permite aos usuários visualizar suas informações pessoais após o login.
 
-## Running unit tests
+## Tecnologias Utilizadas
+- Frontend: Desenvolvido com HTML, CSS (utilizando o framework Bootstrap para estilização rápida e responsiva), e Angular para a estruturação dinâmica da interface do usuário.
+- Autenticação: Implementada para proteger rotas e garantir acesso seguro às funcionalidades de perfil e dados personalizados.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Fluxo de Interação do Usuário
 
-## Running end-to-end tests
+### Visitante
+- Explora a página inicial com a listagem de personagens, locais e episódios.
+- Utiliza a barra de busca para encontrar informações específicas.
+- Clica em um item da lista para visualizar detalhes adicionais na página correspondente.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Usuário Logado
+- Realiza login com credenciais pessoais.
+- Após autenticação bem-sucedida, é saudado pelo nome na interface.
+- Acesse a página de perfil para gerenciar suas informações pessoais e configurações.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Considerações Finais
+A SPA Rick & Morty Dashboard é projetada para oferecer uma experiência de usuário intuitiva e eficiente ao explorar e interagir com os dados da série Rick & Morty. Utilizando tecnologias modernas e práticas, visa proporcionar acesso rápido e seguro às informações desejadas, mantendo uma aparência profissional e responsiva em diferentes dispositivos e tamanhos de tela.
