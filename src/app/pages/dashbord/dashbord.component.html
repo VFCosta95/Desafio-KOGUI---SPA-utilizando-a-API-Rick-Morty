@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- Menu Para Dashboard -->
+        <div class="col-md-2 mb-4 mb-md-0">
+            <app-menu></app-menu>
+        </div>
+        
+        <!-- Conteudo Dashboard -->
+        <div class="col-md-10 px-0">
+            <div class="container"><br>
+                <!-- Jumbotron -->
+                <div class="row">
+                    <div class="col mx-5">
+                        <div class="jumbotron">
+                            <h1 class="display-4 creepster" style="text-transform: uppercase;">Bem vindo {{ currentUser?.username }}</h1>
+                            <p class="lead">Explore episódios, locais e personagens e muito mais de uma maneira fácil e divertida.</p>
+                            <hr class="my-4">
+                            <p>Descubra e explore o incrível universo de Rick e Morty. <br>Navegue nas aventuras e histórias mais loucas. <br>Aproveite sua jornada neste mundo fascinante!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim de Jumbotron -->
+
+                <!-- Seções para Conteudo de API -->
+                <div class="row mx-5">
+                    <!-- Personagens -->
+                    <div class="col-12 col-lg-4 mb-3">
+                        <div class="ajustes-card fundo-personagem">
+                            <h1 class="creepster">Personagens</h1>
+                            <a routerLink="/personagens" class="btn button-19 d-block mx-auto text-center">Ver Todos</a>
+                        </div>
+                    </div>
+                    <!-- Fim de Personagens -->
+
+                    <!-- Locais -->
+                    <div class="col-12 col-lg-4 mb-3">
+                        <div class="ajustes-card fundo-locais">
+                            <h1 class="creepster">Locais</h1>
+                            <a routerLink="/localizacao" class="btn button-19 d-block mx-auto text-center">Ver Todos</a>
+                        </div>
+                    </div>
+                    <!-- Fim de Locais-->
+
+                    <!-- Episodios -->
+                    <div class="col-12 col-lg-4 mb-3">
+                        <div class="ajustes-card fundo-episodios">
+                            <h1 class="creepster">Episódios</h1>
+                            <a routerLink="/episodios" class="btn button-19 d-block mx-auto text-center">Ver Todos</a>
+                        </div>
+                    </div>
+                    <!-- Fim de Episodios -->
+                </div>
+                <!-- Fim de Seções para Conteudo de API -->
+            </div>
+            <!-- Fim de Conteudo Dashboard -->
+        </div>
+    </div>
+</div>

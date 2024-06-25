@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 mb-4 mb-md-0">
+            <app-menu></app-menu>
+        </div>
+        <div class="col-md-9 col-xl-10 px-sm-2">
+            <!-- Sessão-->
+            <section>
+                <h1 class="text-center creepster">Personagens</h1>
+                <!-- Buscador Personagens -->
+                <div>
+                    <div class="container mb-5">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <!-- Formulario de Pesquisa-->
+                                <form (submit)="pesquisarPersonagem(searchInput.value); $event.preventDefault();">
+                                    <div class="input-group">
+                                        <input #searchInput type="text" class="form-control"
+                                            placeholder="Pesquisar Personagens">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="submit">Pesquisar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim de Buscador -->
+                <!-- Lista de Personagens -->
+                <div class="character-list">
+                    <div (scroll)="scrollInfinito()" class="scroll-container"></div>
+                </div>
+                <!-- Fim de Lista -->
+                <!-- Container -->
+                <div class="container text-center">
+                    <div class="row">
+                        <!-- For of para Captura de Todos os Personagens -->
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 p-2" *ngFor="let i of personagem">
+                            <!-- Link para Detalhes -->
+                            <a routerLink="/personagens/{{ i.id }}">
+                                <div class="card-config" style="width: 100%;">
+                                    <!--Foto do Personagem-->
+                                    <img class="card-img-top" [src]="i.image" alt="{{ i.name }}">
+                                    <!--Nome Personagem -->
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center creepster ">{{ i.name }}</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Loading -->
+                        <div class="scroll-center">
+                            <div class="spinner-grow text-success" role="status">
+                                <span class="visually-hidden">Carregando...</span>
+                            </div><br><br>
+                        </div>
+                        <!-- Fim de Loading -->
+                    </div>
+                </div>
+                <!-- Fim de Container -->
+            </section>
+            <!-- Fim de Sessão-->
+        </div>
+    </div>
+</div>

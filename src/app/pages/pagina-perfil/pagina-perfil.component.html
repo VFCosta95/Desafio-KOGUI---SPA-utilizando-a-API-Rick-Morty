@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- Coluna do menu lateral -->
+        <div class="col-md-2 mb-4 mb-md-0">
+            <app-menu></app-menu> <!-- Componente do menu lateral -->
+        </div>
+        <!-- Coluna principal -->
+        <div class="col-md-10 px-0">
+            <!-- Início da seção principal -->
+            <section>
+                <div class="container">
+                    <!-- Cabeçalho do perfil -->
+                    <header class="profile-header">
+                        <div class="profile-summary">
+                            <!-- Saudação e nome de usuário atual -->
+                            <span>Olá, seja bem vindo <h1>{{ currentUser?.username }}</h1></span>
+                        </div>
+                    </header>
+                    <!-- Seção de conteúdo do perfil -->
+                    <section class="profile-section">
+                        <div class="profile-content">
+                            <hr> 
+                            <h2>Informações do Usuário</h2>
+                            <hr> 
+                            <!-- Detalhes do usuário atual -->
+                            <div>
+                                <p><strong>Usuário Login: </strong>{{ currentUser?.username }}</p>
+                                <p><strong>Nome: </strong>{{ currentUser?.nome }}</p>
+                                <p><strong>Sobrenome: </strong>{{ currentUser?.sobrenome }}</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- Fim da seção principal -->
+        </div>
+    </div>
+</div>

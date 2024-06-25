@@ -1,0 +1,47 @@
+<section class="fundo-imagem">
+    <div class="container px-4 py-5 px-md-0 text-center text-lg-start my-0">
+        <div class="row">
+            <div class="col-lg-6" style="z-index: 10">
+                <!-- Conteúdo da primeira coluna -->
+            </div>
+            <div class="col-lg-7 col-md-10 col-sm-12 mx-auto">
+                <!-- Início da segunda coluna -->
+                <div class="card bg-glass">
+                    <h1 class="text-center alinhar-title creepster">Cadastro de Usuários</h1>
+                    <div class="card-body px-md-5">
+
+                        <!-- Navegação por abas -->
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" [class.active]="selectedTab === 'home'"
+                                    (click)="selectTab('home')">Criar Conta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" [class.active]="selectedTab === 'about'"
+                                    (click)="selectTab('about')">Login</a>
+                            </li>
+                        </ul>
+                        <br><br>
+                        
+                        <!-- Conteúdo das abas -->
+                        <div class="tab-content">
+                            <!-- Aba "Criar Conta" -->
+                            <div *ngIf="selectedTab === 'home'">
+                                <app-criar-user></app-criar-user>
+                            </div>
+                            <!-- Aba "Login" -->
+                            <div *ngIf="selectedTab === 'about'">
+                                <app-login></app-login>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Fim da segunda coluna -->
+        </div>
+        <!-- Fim da div.row -->
+    </div>
+    <!-- Fim da div.container -->
+</section>
+<!-- Fim da section.fundo-imagem -->

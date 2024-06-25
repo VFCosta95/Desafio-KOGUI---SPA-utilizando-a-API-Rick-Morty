@@ -1,0 +1,99 @@
+<!-- Menu lateral para dispositivos maiores -->
+<div class="container-fluid d-none d-sm-block position-fixed"
+    style="top: 0; left: 0; width: 250px; background-color: #043C6E; z-index: 1000;">
+    
+    <!-- Conteúdo do menu -->
+    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        
+        <!-- Lista de navegação -->
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            
+            <!-- Título Boas Vindas -->
+            <br>
+            <h3>Welcome</h3>
+            <hr>
+            <br>
+            
+            <!-- Home - Navegar pro Dashbord Normal -->
+            <li class="nav-item">
+                <a routerLink="/dashboard" class="nav-link align-middle px-0">
+                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                </a>
+            </li>
+
+            <!-- Select de Personagens, Locais e Episódios -->
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle align-middle px-0" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fs-4 bi-journal-text"></i> <span class="ms-1 d-none d-sm-inline">Selecionar</span>
+                    </a>
+
+                    <!-- Dropdown menu -->
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" routerLink="/personagens">Personagens</a></li>
+                        <li><a class="dropdown-item" routerLink="/localizacao">Locais</a></li>
+                        <li><a class="dropdown-item" routerLink="/episodios">Episódios</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Ver Perfil -->
+            <li>
+                <a routerLink="/perfil" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Ver Perfil</span>
+                </a>
+            </li>
+
+        </ul>
+        <!-- Fim da lista de navegação -->
+
+        <hr>
+
+        <!-- Logout -->
+        <div class="dropdown pb-4">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="d-none d-sm-inline mx-1">Logout</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                <li><a class="dropdown-item" href="#">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fim do conteúdo do menu -->
+</div>
+<!-- Fim do menu lateral para dispositivos maiores -->
+
+<!-- Menu para dispositivos menores -->
+<div class="container-fluid d-block d-sm-none position-fixed"
+    style="top: 0; left: 0; width: 100%; background-color: #043C6E; z-index: 1000;">
+    
+    <!-- Conteúdo do menu para dispositivos menores -->
+    <div class="px-3 py-2 text-black">
+        
+        <!-- Dropdown do menu -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+            </button>
+            
+            <!-- Itens do dropdown -->
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" routerLink="/dashboard"><i class="bi bi-house"></i> Home</a></li>
+                <li><a class="dropdown-item" routerLink="/personagens"><i class="bi bi-journal-text"></i>
+                        Personagens</a></li>
+                <li><a class="dropdown-item" routerLink="/localizacao"><i class="bi bi-geo-alt"></i> Locais</a></li>
+                <li><a class="dropdown-item" routerLink="/episodios"><i class="bi bi-film"></i> Episódios</a></li>
+                <li><a class="dropdown-item" routerLink="/perfil"><i class="bi bi-table"></i> Ver Perfil</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Sair</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fim do conteúdo do menu para dispositivos menores -->
+</div>
+<!-- Fim do menu para dispositivos menores -->

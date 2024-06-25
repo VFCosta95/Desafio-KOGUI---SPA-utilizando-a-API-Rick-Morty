@@ -1,0 +1,96 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 mb-4 mb-md-0">
+      <app-menu></app-menu>
+  </div>
+    <div class="col-md-9 col-xl-10 px-sm-2">
+      <!-- Sessão-->
+      <section>
+        <h1 class="text-center creepster">Episódios</h1>
+        <!-- Buscador -->
+        <div>
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <!-- Formulário de Pesquisa-->
+                <form (submit)="pesquisarEpisodios(searchInput.value); $event.preventDefault();">
+                  <div class="input-group">
+                    <input #searchInput type="text" class="form-control" placeholder="Pesquisar Episódios">
+                    <div class="input-group-append">
+                      <button class="btn" type="submit">Pesquisar</button>
+                    </div>
+                  </div>
+                </form>
+                <!-- Fim de Formulário-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fim de Buscador -->
+
+        <!-- Lista de Episódios -->
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <!-- Colunas -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let episodio of episodios">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title creepster">{{ episodio.name }}</h5>
+                  <hr>
+                  <a (click)="openModal(episodio)" class="btn">Ver Detalhes</a>
+                </div>
+              </div>
+            </div>
+            <!-- Fim de Colunas -->
+
+            <!-- Loading -->
+            <div class="scroll-center">
+              <div class="spinner-grow text-warning" role="status">
+                <span class="visually-hidden">Carregando...</span>
+              </div><br><br>
+            </div>
+            <!-- Fim de Loading -->
+          </div>
+        </div>
+        <!-- Fim da Lista de Episódios -->
+
+        <!-- Modal de Detalhes -->
+        <div class="modal" id="detalhesModal" tabindex="-1" role="dialog" aria-labelledby="detalhesModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title creepster" id="detalhesModalLabel">Detalhes do Episódio</h5>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="modalId" class="creepster">ID:</label>
+                  <p id="modalId">{{ modalEpisodio.id }}</p>
+                </div>
+                <div class="form-group">
+                  <label for="modalName" class="creepster">Nome:</label>
+                  <p id="modalName">{{ modalEpisodio.name }}</p>
+                </div>
+                <div class="form-group">
+                  <label for="modalAirDate" class="creepster">Data de Lançamento:</label>
+                  <p id="modalAirDate">{{ modalEpisodio.air_date }}</p>
+                </div>
+                <div class="form-group">
+                  <label for="modalEpisode" class="creepster">Episódio:</label>
+                  <p id="modalEpisode">{{ modalEpisodio.episode }}</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                  (click)="fecharModal()">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fim do Modal de Detalhes -->
+
+      </section>
+      <!-- Fim de Sessão -->
+    </div>
+  </div>
+</div>

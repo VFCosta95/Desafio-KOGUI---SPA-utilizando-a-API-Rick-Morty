@@ -1,0 +1,68 @@
+<div class="container">
+  <form [formGroup]="registrarForm" (ngSubmit)="onSubmit()">
+    <!-- Usuário -->
+    <div class="mb-3">
+      <label for="usuario" class="form-label"></label>
+      <input id="usuario" formControlName="username" class="form-control" type="text" placeholder="Usuário">
+      <div *ngIf="registrarForm.get('username')?.invalid && registrarForm.get('username')?.touched" class="text-danger">
+        Usuário é obrigatório.
+      </div>
+    </div>
+    <div class="row">
+      <!-- Nome -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="nome" class="form-label"></label>
+          <input id="nome" formControlName="nome" class="form-control" type="text" placeholder="Nome">
+          <div *ngIf="registrarForm.get('nome')?.invalid && registrarForm.get('nome')?.touched" class="text-danger">
+            Nome é obrigatório.
+          </div>
+        </div>
+      </div>
+      <!-- Sobrenome -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="sobrenome" class="form-label"></label>
+          <input id="sobrenome" formControlName="sobrenome" class="form-control" type="text" placeholder="Sobrenome">
+          <div *ngIf="registrarForm.get('sobrenome')?.invalid && registrarForm.get('sobrenome')?.touched"
+            class="text-danger">
+            Sobrenome é obrigatório.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Senha -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="password" class="form-label"></label>
+          <input id="password" formControlName="password" class="form-control" type="password" placeholder="Senha">
+          <div *ngIf="registrarForm.get('password')?.invalid && registrarForm.get('password')?.touched"
+            class="text-danger">
+            Senha deve ter no mínimo 6 caracteres.
+          </div>
+        </div>
+      </div>
+      <!-- Confirmar Senha -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label"></label>
+          <input id="confirmPassword" formControlName="confirmPassword" class="form-control" type="password"
+            placeholder="Confirme a Senha">
+          <div *ngIf="registrarForm.hasError('mismatch')" class="text-danger">
+            Senhas não conferem.
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <!-- Mensagem de Sucesso -->
+    <div *ngIf="registroSucesso" class="alert alert-success">
+      Registro realizado com sucesso!
+    </div>
+    <!-- Mensagem de Erro -->
+    <div *ngIf="erroMsg" class="alert alert-danger">{{ erroMsg }}</div>
+    <button type="submit" class="btn btn-primary btn-block mb-4" style="width: 100%;" [disabled]="registrarForm.invalid">
+      Registrar
+    </button>
+  </form>
+</div>

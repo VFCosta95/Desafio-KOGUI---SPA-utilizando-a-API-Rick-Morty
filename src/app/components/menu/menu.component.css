@@ -1,0 +1,12 @@
+/* Letras Menu Lateral */
+a{
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+/* Letras Menu Normal */
+@media (max-width: 767px) {
+  a{
+      color: #043C6E;
+  }
+}

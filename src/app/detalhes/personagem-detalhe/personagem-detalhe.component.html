@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- Coluna do menu -->
+        <div class="col-md-2 mb-4 mb-md-0">
+            <app-menu></app-menu><br>
+        </div>
+        <!-- Coluna principal -->
+        <div class="col-md-9 col-xl-10 px-sm-2">
+            <!-- Início da seção -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="profile-card">
+                                <div class="text-center">
+                                    <!-- Imagem do Personagem -->
+                                    <img src="{{ dados.image }}" alt="Personagem" class="profile-image mb-3">
+                                </div>
+                                <!-- Detalhes do Personagem -->
+                                <div class="profile-details">
+                                    <h2>{{ dados.name }}</h2>
+                                    <ul>
+                                        <li><strong>Status:</strong> {{ dados.status }}</li>
+                                        <li><strong>Espécie:</strong> {{ dados.species }}</li>
+                                        <li><strong>Gênero:</strong> {{ dados.gender }}</li>
+                                        <li><strong>Origem:</strong> {{ dados.origin.name }}</li>
+                                        <li><strong>Localização:</strong> {{ dados.location.name }}</li>
+                                        <li><strong>Criado em:</strong> {{ formatDate(dados.created) }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fim da seção -->
+        </div>
+    </div>
+</div>

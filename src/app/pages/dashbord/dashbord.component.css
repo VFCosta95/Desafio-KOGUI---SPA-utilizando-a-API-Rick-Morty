@@ -1,0 +1,153 @@
+.ajustes-card {
+    width: 240px;
+    height: 220px;
+    margin-top: 80px;
+    border-radius: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Cores, Contorno e sombras Titulos do Card */
+.ajustes-card h1 {
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 2px #000;
+    text-stroke: 2px #000;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Cores Fundo das imagens */
+.fundo-personagem {
+    background-color: #9AD052;
+}
+.fundo-locais {
+    background-color: #E4A788;
+}
+.fundo-episodios {
+    background-color: #f0e14a;
+}
+
+/* Botão Config */
+.button-19 {
+    appearance: button;
+    background-color: grey;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 50%;
+}
+.button-19:after {
+    background-clip: padding-box;
+    background-color: whitesmoke;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.button-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+.button-19:disabled {
+    cursor: auto;
+}
+.button-19:active {
+    border-width: 4px 0 0;
+    background: none;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: #59BCE7;
+    margin-top: 20px;
+    padding: 28px;
+    border-radius: 24px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* Parágrafo e Título Config */
+p {
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    text-align: center;
+}
+.jumbotron h1 {
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 3px #000;
+    text-stroke: 3px #000;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Media Query para telas menores que 768px */
+@media (max-width: 767px) {
+    .ajustes-card {
+        width: 100%; 
+        max-width: 300px; 
+        margin: 20px auto; 
+        height: auto; 
+        margin-top: 40px; 
+    }
+
+    .button-19 {
+        padding: 10px 16px;
+        font-size: 14px; 
+    }
+
+    .jumbotron {
+        padding: 20px; 
+        margin-top: 30px; 
+        border-radius: 12px; 
+    }
+
+    p {
+        font-size: 16px; 
+    }
+
+    .jumbotron h1 {
+        color: whitesmoke;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        -webkit-text-stroke: 2px #000;
+        text-stroke: 2px #000;
+        letter-spacing: 1px;
+    }
+}

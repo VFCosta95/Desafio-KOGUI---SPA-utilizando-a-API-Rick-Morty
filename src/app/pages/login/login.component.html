@@ -1,0 +1,22 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <!-- Usuario -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input id="username" formControlName="username" class="form-control" type="text" placeholder="Digite o Usuario" />
+    <label for="username" class="form-label"></label>
+  </div>
+
+  <!-- Senha -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input id="password" formControlName="password" class="form-control" type="password"
+      placeholder="Digite sua Senha" />
+    <label for="password" class="form-label"></label>
+  </div>
+
+  <!-- Mensagem Erro de Login-->
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <!-- Fazer Login -->
+  <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary btn-block mb-4"
+    style="width: 100%;">Entrar</button>
+
+</form>

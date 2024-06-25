@@ -1,0 +1,55 @@
+/* Titulo */
+h1{
+    color: #577334;
+    font-size: 85px;
+    padding: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 3px #000; 
+    text-stroke: 3px #000; 
+    letter-spacing: 3px;
+}
+h5{
+    color:#ffffff;
+    letter-spacing: 1px;
+    font-size: 24px;
+    -webkit-text-stroke: 2px #000; 
+    text-stroke: 2px #000; 
+    margin-top: 20px;
+} 
+
+/* Cor de Fundo */
+section{
+    background-color: #ffffff;
+}
+
+/* Card */
+.card-config{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    background-color: rgb(245, 255, 242);
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+/* Botão de Pesquisa */
+.btn{
+    background-color: #577334;
+    color: whitesmoke;
+    margin-left: 3px;
+}
+
+/* Carregamento Centralizado*/
+.scroll-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    h1{
+        font-size: 48px;
+    }
+}
